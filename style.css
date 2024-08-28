@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #242424;
+    padding: 5px;
+    padding-bottom: 20px;
+  }
+  
+  #results {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 35px 20px;
+    margin-top: 30px;
+  }
+  
+  .movie {
+    background-color: #2a2a2a;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*push the img to bottom */
+    height: 100%; /* make div takes up the full height of its container */
+    flex-direction: column;
+    justify-content: space-between;
+    transition: ease-out box-shadow 0.3s;
+    -webkit-box-shadow: 0px 0px 5px -2px rgba(157, 103, 194, 0);
+    -moz-box-shadow: 0px 0px 5px -2px rgba(157, 103, 194, 0);
+    box-shadow: 0px 0px 5px -2px rgba(157, 103, 194, 0);
+  }
+  
+  .movie:hover {
+    -webkit-box-shadow: 0px 0px 0px 8px rgba(195,181,253,1);
+    -moz-box-shadow: 0px 0px 0px 8px rgba(195,181,253,1);
+    box-shadow: 0px 0px 0px 8px rgba(195,181,253,1);
+
+  }
+  
+  .movie img {
+    width: 100%;
+    border-radius: 8px;
+    align-self: flex-end; /* aligns the img at the bottom */
+    margin-top: -10%;
+  }
+  
+  #fullScreenOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #fullScreenOverlay iframe {
+    width: 80%;
+    height: 80%;
+    border: none;
+  }
+  
+  #closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #titlelol {
+    text-align: center;
+  }
+  
+  #titlelol h1 {
+    color: #f0f0f0;
+    font-size: 40px;
+    margin-top: 0%;
+    filter: drop-shadow(0px 0px 5px #c4b5fd);
+  }
+  
+  #titlelol input {
+    width: 70%;
+    height: 50px !important;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    border: none;
+  }
+  
+  #titlelol button {
+    height: 55px !important;
+    border-radius: 20px;
+    width: 55   px;
+    background: #c4b5fd;
+    border: none;
+    box-shadow: inset 0px 0px 10px rgb(205, 192, 255);
+  }
+  
+  .movie button {
+    background-color: green;
+    filter: drop-shadow(0px 0px 5px #000000);
+    height: 100;
+  }
+  
+  .movie h2 {
+    color: #d2d1d1;
+    margin-top: 3%;
+    font-size: 18px;
+  }
+  
+  .movie img {
+    display: inline-block;
+    align-self: flex-end;
+  }
+  
