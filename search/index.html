@@ -8,15 +8,25 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    </head>
    <body>
-      <div id="titlelol">
-         <ul>
-         <li>ppmovies</li>
-      </ul>
+      <div id=titlelol>
+         <h1>ppmovies</h1>
+         <input type="text" id="movieName" placeholder="Enter movie name" >
+         <button id ="buttonlol" onclick="searchMovie()"><i class="fa-solid fa-magnifying-glass"></i></button>
+         <script>
+            var input = document.getElementById("movieName");
+            input.addEventListener("keypress", function(event) {
+              if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("buttonlol").click();
+              }
+            });
+         </script>
       </div>
-      <div id="popularMovies"></div>
-      <div id="results"></div>
+   <div id="results"></div>
+      
+      </div>
       <!-- Fullscreen Overlay for the Movie Player -->
-      <div id="fullScreenOverlay">  
+      <div id="fullScreenOverlay">
          <button id="closeButton" onclick="closeOverlay()">&#10005;</button>
          <iframe id="videoPlayer" allowfullscreen></iframe>
       </div>
