@@ -26,7 +26,7 @@ function displaypopular(movies) {
 }
 
 function embedMovie(movieId) {
-   const embedUrl = `https://moviesapi.club/movie/${movieId}`;
+   const embedUrl = `https://vidsrc.pro/embed/movie/${movieId}`;
    const player = document.getElementById('player');
    const overlay = document.getElementById('dicknballs');
 
