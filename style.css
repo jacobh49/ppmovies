@@ -5,7 +5,7 @@ body {
 	padding-bottom: 20px;
 }
 
-#popularMovies,
+#popular,
 #results {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
@@ -23,7 +23,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
-	transition: ease-out box-shadow 0.3s;
+	transition: ease-out box-shadow 0.25s;
 	box-shadow: 0px 0px 5px -2px rgba(157, 103, 194, 0);
 }
 
@@ -38,7 +38,7 @@ body {
 	margin-top: -10%;
 }
 
-#fullScreenOverlay {
+#dicknballs {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -51,13 +51,13 @@ body {
 	align-items: center;
 }
 
-#fullScreenOverlay iframe {
+#dicknballs iframe {
 	width: 80%;
 	height: 80%;
 	border: none;
 }
 
-#closeButton {
+#close {
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -96,6 +96,7 @@ body {
 	border: none;
 	box-shadow: inset 0px 0px 10px rgb(205, 192, 255);
 	color: #2a2a2a;
+	cursor: pointer;
 }
 
 .movie h2 {
@@ -110,21 +111,21 @@ body {
 }
 
 @media (max-width: 1300px) {
-	#popularMovies,
+	#popular,
 	#results {
 		grid-template-columns: repeat(6, 1fr);
 	}	
 }
 
 @media (max-width: 1075px) {
-	#popularMovies,
+	#popular,
 	#results {
 		grid-template-columns: repeat(5, 1fr);
 	}	
 }
 
 @media (max-width: 800px) {
-	#popularMovies,
+	#popular,
 	#results {
 		grid-template-columns: repeat(4, 1fr);
 	}	
@@ -132,21 +133,21 @@ body {
 
 
 @media (max-width: 550px) {
-	#popularMovies,
+	#popular,
 	#results {
 		grid-template-columns: repeat(3, 1fr);
 	}	
 }
 
 @media (max-width: 400px) {
-	#popularMovies,
+	#popular,
 	#results {
 		grid-template-columns: repeat(2, 1fr);
 	}	
 }
 
 @media (max-width: 250px) {
-	#popularMovies,
+	#popular,
 	#results {
 		grid-template-columns: repeat(1, 1fr);
 	}	
