@@ -23,7 +23,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
-	transition: ease-out box-shadow 0.25s;
+	transition: ease-out box-shadow 0.2s;
 	box-shadow: 0px 0px 5px -2px rgba(157, 103, 194, 0);
 }
 
