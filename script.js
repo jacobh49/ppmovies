@@ -18,7 +18,7 @@ function displayPopularMovies(movies) {
    movies.forEach(movie => {
       popularMoviesDiv.innerHTML += `
             <div class="movie" onclick="embedMovie('${movie.id}')">
-                <h2>${movie.title} (${movie.release_date})</h2>
+                <h2>${movie.title}</h2>
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
             </div>
         `;
@@ -70,7 +70,7 @@ function displayResults(movies) {
    movies.forEach(movie => {
       resultsDiv.innerHTML += `
             <div class="movie" onclick="embedMovie('${movie.id}')">
-                <h2>${movie.title} (${movie.release_date})</h2>
+                <h2>${movie.title}</h2>
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
             </div>
         `;
