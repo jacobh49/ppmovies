@@ -108,3 +108,46 @@ body {
 	display: inline-block;
 	align-self: flex-end;
 }
+
+@media (max-width: 1300px) {
+	#popularMovies,
+	#results {
+		grid-template-columns: repeat(6, 1fr);
+	}	
+}
+
+@media (max-width: 1075px) {
+	#popularMovies,
+	#results {
+		grid-template-columns: repeat(5, 1fr);
+	}	
+}
+
+@media (max-width: 800px) {
+	#popularMovies,
+	#results {
+		grid-template-columns: repeat(4, 1fr);
+	}	
+}
+
+
+@media (max-width: 550px) {
+	#popularMovies,
+	#results {
+		grid-template-columns: repeat(3, 1fr);
+	}	
+}
+
+@media (max-width: 400px) {
+	#popularMovies,
+	#results {
+		grid-template-columns: repeat(2, 1fr);
+	}	
+}
+
+@media (max-width: 250px) {
+	#popularMovies,
+	#results {
+		grid-template-columns: repeat(1, 1fr);
+	}	
+}
