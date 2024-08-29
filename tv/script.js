@@ -26,7 +26,7 @@ function displaypopular(shows) {
 }
 
 function embedMovie(showId) {
-   const embedUrl = `https://autoembed.cc/embed/tv/${showId}`;
+   const embedUrl = `https://vidsrc.pro/embed/tv/${showId}`;
    const player = document.getElementById('player');
    const overlay = document.getElementById('dicknballs');
 
