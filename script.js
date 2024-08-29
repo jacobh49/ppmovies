@@ -42,3 +42,37 @@ function closeOverlay() {
 
 // Call the function to load popular movies when the page loads
 getPopularMovies();
+
+async function searchMovie() {
+    const movieName = document.getElementById('movieName').value;
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(movieName)}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        hidePopularMovies();
+        displayResults(data.results);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+function hidePopularMovies() {
+    const popularMoviesDiv = document.getElementById('popularMovies');
+    popularMoviesDiv.style.display = 'none';
+}
+
+function displayResults(movies) {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = ''; // Clear previous results
+    resultsDiv.style.display = 'grid'; // Ensure grid layout is applied
+
+    movies.forEach(movie => {
+        resultsDiv.innerHTML += `
+            <div class="movie" onclick="embedMovie('${movie.id}')">
+                <h2>${movie.title} (${movie.release_date})</h2>
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
+            </div>
+        `;
+    });
+}
