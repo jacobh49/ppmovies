@@ -1,14 +1,15 @@
-const apiKey = "853c77bd76b2772ab88ab049ad08d610";
+// and also
+const apikey = "853c77bd76b2772ab88ab049ad08d610";
 
 async function getpopular() {
-   const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+   const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=1`;
 
    try {
       const response = await fetch(url);
       const data = await response.json();
       displaypopular(data.results);
    } catch (error) {
-      console.error('Error fetching popular movies:', error);
+      console.error('error fetching popular movies', error);
    }
 }
 
@@ -17,7 +18,7 @@ function displaypopular(movies) {
    popularDiv.innerHTML = '';
    movies.forEach(movie => {
       popularDiv.innerHTML += `
-            <div class="movie" onclick="embedMovie('${movie.id}')">
+            <div class="movie" onclick="embed('${movie.id}')">
                 <h2>${movie.title}</h2>
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
             </div>
@@ -25,12 +26,12 @@ function displaypopular(movies) {
    });
 }
 
-function embedMovie(movieId) {
-   const embedUrl = `https://vidsrc.pro/embed/movie/${movieId}`;
+function embed(movieId) {
+   const embedurl = `https://vidsrc.pro/embed/movie/${movieId}`;
    const player = document.getElementById('player');
    const overlay = document.getElementById('dicknballs');
 
-   player.src = embedUrl;
+   player.src = embedurl;
    overlay.style.display = 'flex';
 }
 
@@ -45,7 +46,7 @@ getpopular();
 
 async function searchMovie() {
    const movie = document.getElementById('movie').value;
-   const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(movie)}`;
+   const url = `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${encodeURIComponent(movie)}`;
 
    try {
       const response = await fetch(url);
@@ -69,7 +70,7 @@ function displayResults(movies) {
 
    movies.forEach(movie => {
       resultsDiv.innerHTML += `
-            <div class="movie" onclick="embedMovie('${movie.id}')">
+            <div class="movie" onclick="embed('${movie.id}')">
                 <h2>${movie.title}</h2>
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
             </div>
