@@ -27,7 +27,7 @@ function displaypopular(movies) {
 }
 
 function embed(movieId) {
-   const embedurl = `https://vidsrc.me/embed/movie/${movieId}`;
+   const embedurl = `https://moviee.tv/embed/movie/${movieId}`;
    const player = document.getElementById('player');
    const overlay = document.getElementById('dicknballs');
 
